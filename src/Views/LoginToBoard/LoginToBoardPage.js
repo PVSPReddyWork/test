@@ -61,7 +61,7 @@ const LoginToBoard_Page = (parms) => {
       <div className="divBody">
         <div className="divData">
           <div className="divDataInput">
-            <form onSubmit="return false;" action="" method="POST">
+            
               <input
                 type="text"
                 name="deviceId"
@@ -83,7 +83,7 @@ const LoginToBoard_Page = (parms) => {
               >
                 Login
               </button>
-            </form>
+            
           </div>
           <div className="divDataOutputDisplay"></div>
         </div>
