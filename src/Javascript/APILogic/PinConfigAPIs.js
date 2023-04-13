@@ -15,7 +15,7 @@ export const sendCurrentConfig = async (endpoint, postData) => {
 
 export const fetchCurrentConfig = async (endpoint, postData) => {
   try {
-    let url = Constants.bastURL + endpoint;
+    let url = Constants.baseURL + endpoint;
     let _postData = JSON.stringify(postData);
     var response = await DataBaseConnection.PostAPIRequest(url, _postData);
     return response;
