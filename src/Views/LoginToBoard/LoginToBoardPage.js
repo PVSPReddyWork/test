@@ -17,7 +17,7 @@ const LoginToBoard_Page = (parms) => {
   const onTextValueChanged = (e) => {
     try {
       var ownerId = e.target.name;
-      if (ownerId !== mull && ownerId !== undefined) {
+      if (ownerId !== null && ownerId !== undefined) {
         switch (ownerId) {
           case 'deviceId':
             deviceId = e.target.value;
@@ -47,10 +47,7 @@ const LoginToBoard_Page = (parms) => {
           device_id: deviceId,
           device_name: deviceName,
         };
-        var response = await fetchCurrentConfig(
-          GetDeviceConfigEndPoint,
-          postData
-        );
+        //var response = await fetchCurrentConfig( GetDeviceConfigEndPoint, postData);
       }
     } catch (ex) {
       CustomLogger.ErrorLogger(ex);
@@ -61,27 +58,23 @@ const LoginToBoard_Page = (parms) => {
       <div className="divBody">
         <div className="divData">
           <div className="divDataInput">
-              <input
-                type="text"
-                name="deviceId"
-                onChange={onTextValueChanged}
-                required
-              />
-              <br></br>
-              <input
-                type="text"
-                name="deviceName"
-                onChange={onTextValueChanged}
-                required
-              />
-              <br></br>
-              <button
-                type="submit"
-                onClick={onLoginClicked}
-                name="submitButton"
-              >
-                Login
-              </button>
+            <input
+              type="text"
+              name="deviceId"
+              onChange={onTextValueChanged}
+              required
+            />
+            <br></br>
+            <input
+              type="text"
+              name="deviceName"
+              onChange={onTextValueChanged}
+              required
+            />
+            <br></br>
+            <button type="submit" onClick={onLoginClicked} name="submitButton">
+              Login
+            </button>
           </div>
           <div className="divDataOutputDisplay"></div>
         </div>
