@@ -12,8 +12,8 @@ const LoginToBoard_Page = (parms) => {
     // imgRef.current && loadModels();
   }, []);
 
-  let deviceId = '';
-  let deviceName = '';
+  var deviceId = '';
+  var deviceName = '';
   const onTextValueChanged = (e) => {
     try {
       var ownerId = e.target.name;
@@ -61,7 +61,6 @@ const LoginToBoard_Page = (parms) => {
       <div className="divBody">
         <div className="divData">
           <div className="divDataInput">
-            
               <input
                 type="text"
                 name="deviceId"
@@ -83,7 +82,6 @@ const LoginToBoard_Page = (parms) => {
               >
                 Login
               </button>
-            
           </div>
           <div className="divDataOutputDisplay"></div>
         </div>
