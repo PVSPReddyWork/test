@@ -1,0 +1,33 @@
+{
+  "board_Types": [
+    {
+      "board_name": "esp8266-01",
+      "total_pins": 8,
+      "pin_config": [
+        {
+          "pin_number": 0,
+          "is_vcc": false,
+          "is_gnd": false,
+          "is_reset": false,
+          "is_chip_enable": false,
+          "is_pwm": false,
+          "is_digital": false,
+          "is_analog": false,
+          "is_rx": false,
+          "is_tx": false,
+          "is_uart": false
+        }
+      ]
+    }
+  ],
+  "Expected_data": {
+    "device_id": "",
+    "device_name": "",
+    "pins_Data": [
+      {
+        "pin_id": 0,
+        "pin_status": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch .checkboxInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Switchcontainer {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.Switchcontainer:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.checkboxInput:checked + .Switchcontainer {
+  background-color: #2196f3;
+}
+
+.checkboxInput:focus + .Switchcontainer {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.checkboxInput:checked + .Switchcontainer:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded Switchcontainer */
+.Switchcontainer.round {
+  border-radius: 34px;
+}
+
+.Switchcontainer.round:before {
+  border-radius: 50%;
+}
+
+.divSwitches {
+  display: flex;
+  align-items: center;
+}
+.divSwitchHolder {
+  margin: 5px;
+  padding: 5px;
+}
