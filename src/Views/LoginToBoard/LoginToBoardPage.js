@@ -33,7 +33,7 @@ const LoginToBoard_Page = (parms) => {
       CustomLogger.ErrorLogger(ex);
     }
   };
-  const onLoginClicked = (e) => {
+  const onLoginClicked = async (e) => {
     try {
       if (
         deviceId !== null &&
