@@ -48,6 +48,7 @@ const LoginToBoard_Page = (parms) => {
           device_name: deviceName,
         };
         var response = await fetchCurrentConfig( GetDeviceConfigEndPoint, postData);
+        CustomLogger.DataLogger(response);
       }
     } catch (ex) {
       CustomLogger.ErrorLogger(ex);
