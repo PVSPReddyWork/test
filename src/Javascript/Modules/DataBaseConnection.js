@@ -1,10 +1,10 @@
-import { Axios } from 'axios';
+import axios from 'axios';
 
 const { CustomLogger } = require('./CustomLogger.js');
 
-const GetAPIRequest = async (url) => {
+export const GetAPIRequest = async (url) => {
   try {
-    const response = await Axios.get(url);
+    const response = await axios.get(url);
     console.log('response  ', response);
     return response.data;
   } catch (ex) {
@@ -12,13 +12,13 @@ const GetAPIRequest = async (url) => {
   }
 };
 
-const PostAPIRequest = async (url, postData) => {
+export const PostAPIRequest = async (url, postData) => {
   try {
-    const response = await Axios.post(url, postData);
+    const response = await axios.post(url, postData);
     return response.data;
   } catch (ex) {
     CustomLogger.ErrorLogger(ex);
   }
 };
 
-module.exports = { GetAPIRequest, PostAPIRequest };
+//module.exports = { GetAPIRequest, PostAPIRequest };
